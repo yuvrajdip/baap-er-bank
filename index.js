@@ -14,9 +14,10 @@ document.getElementById("btn-submit").addEventListener("click", function(){
 
 
   if(email==="sontan@baap.com" && password==="secret"){
-    console.log("valid user")
+    // console.log("valid user")
+    window.location.href="./bank-inside.html"
   }
   else{
-    console.log("invalid user");
+    alert('password likha rakhos na ken')
   }
 })
