@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>bank-inside</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body>
   <header>
-    <h1 class="text-5xl text-center m-6">Let's get some 
+    <h1 class="text-5xl text-center m-6">Let's get some
       <span class="font-semibold text-violet-600"> Moooooney!!!!</span>
-     </h1>
+    </h1>
   </header>
   <main>
     <section>
-      <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto">
+      <!-- deposit withdraw balance -->
+      <div class="grid grid-cols-3 gap-4 w-9/12 m-auto mb-8">
         <div class="bg-green-200 p-8 rounded-xl">
           <h4 class="text-2xl">Deposit</h4>
           <h2 class="text-5xl">$00</h2>
@@ -28,7 +31,26 @@
           <h2 class="text-5xl">$1240</h2>
         </div>
       </div>
+
+      <!-- please deposit, please withdraw -->
+      <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto">
+        <div class="bg-blue-500 p-8 rounded-xl">
+          <p class="text-3xl text-white text-semibold block mb-2">Please Deposit</p>
+          <input type="text" placeholder="$amount you want to deposit" class="block mb-2 w-9/12 p-2">
+          <button
+            class="block px-6 py-2 text-semibold text-white bg-violet-400 rounded-xl">Deposit
+          </button>
+        </div>
+        <div class="bg-orange-300 p-8 rounded-xl">
+          <p class="block text-3xl text-white text-semibold mb-2" >Please Withdraw</p>
+          <input type="text" placeholder="amount you want to withdraw" class="block mb-2 w-9/12 p-2">
+          <button
+            class="block px-6 py-2 text-semibold text-white bg-violet-400 rounded-lg">Withdraw
+          </button>
+        </div>
+      </div>
     </section>
   </main>
 </body>
+
 </html>
