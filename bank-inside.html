@@ -20,15 +20,15 @@
       <div class="grid grid-cols-3 gap-4 w-9/12 m-auto mb-8">
         <div class="bg-green-200 p-8 rounded-xl">
           <h4 class="text-2xl">Deposit</h4>
-          <h2 class="text-5xl">$00</h2>
+          <h2 class="text-5xl">$ <span id="deposit-total">00</span></h2>
         </div>
         <div class="bg-yellow-200 p-8 rounded-xl">
           <h4 class="text-2xl">Withdraw</h4>
-          <h2 class="text-5xl">$00</h2>
+          <h2 class="text-5xl">$ <span class="withdraw">00</span></h2>
         </div>
         <div class="bg-violet-200 p-8 rounded-xl">
           <h4 class="text-2xl">Balance</h4>
-          <h2 class="text-5xl">$1240</h2>
+          <h2 class="text-5xl">$ <span id="balance-total">1240</span></h2>
         </div>
       </div>
 
@@ -36,8 +36,8 @@
       <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto">
         <div class="bg-blue-500 p-8 rounded-xl">
           <p class="text-3xl text-white text-semibold block mb-2">Please Deposit</p>
-          <input type="text" placeholder="$amount you want to deposit" class="block mb-2 w-9/12 p-2">
-          <button
+          <input type="text" placeholder="$amount you want to deposit" class="block mb-2 w-9/12 p-2" id="deposit-field">
+          <button id="btn-deposit"
             class="block px-6 py-2 text-semibold text-white bg-violet-400 rounded-xl">Deposit
           </button>
         </div>
@@ -51,6 +51,8 @@
       </div>
     </section>
   </main>
+
+  <script src="./bank-inside.js"></script>
 </body>
 
 </html>
