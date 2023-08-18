@@ -24,7 +24,7 @@
         </div>
         <div class="bg-yellow-200 p-8 rounded-xl">
           <h4 class="text-2xl">Withdraw</h4>
-          <h2 class="text-5xl">$ <span class="withdraw">00</span></h2>
+          <h2 class="text-5xl">$ <span id="withdraw-total">00</span></h2>
         </div>
         <div class="bg-violet-200 p-8 rounded-xl">
           <h4 class="text-2xl">Balance</h4>
@@ -43,8 +43,8 @@
         </div>
         <div class="bg-orange-300 p-8 rounded-xl">
           <p class="block text-3xl text-white text-semibold mb-2" >Please Withdraw</p>
-          <input type="text" placeholder="amount you want to withdraw" class="block mb-2 w-9/12 p-2">
-          <button
+          <input type="text" id="withdraw-field" placeholder="amount you want to withdraw" class="block mb-2 w-9/12 p-2">
+          <button id="withdraw-btn"
             class="block px-6 py-2 text-semibold text-white bg-violet-400 rounded-lg">Withdraw
           </button>
         </div>

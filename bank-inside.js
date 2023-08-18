@@ -27,3 +27,41 @@ document.getElementById("btn-deposit").addEventListener("click",function(){
   balanceTotalElement.innerText = currentBalanceTotal
 
 })
+
+document.getElementById("withdraw-btn").addEventListener('click',function(){
+  
+  // catching withdraw amount
+  const withdrawField = document.getElementById("withdraw-field")
+  const withDrawAmountString = withdrawField.value;
+  let withdrawAmount = parseFloat(withDrawAmountString);
+
+
+  // Updating withdraw total
+  const withdrawTotalElement = document.getElementById("withdraw-total")
+  const withdrawTotalString = withdrawTotalElement.innerText
+  let withdrawTotalAmount = parseFloat(withdrawTotalString)
+
+  withdrawTotalAmount+= withdrawAmount
+  
+  // withdrawTotalElement.innerText = withdrawTotalAmount
+
+
+  let balanceTotalElement= document.getElementById("balance-total")
+  let balanceTotalAmount = balanceTotalElement.innerText
+  balanceTotalAmount = parseFloat(balanceTotalAmount)
+  balanceTotalAmount -= withdrawAmount
+
+  if(balanceTotalAmount<1000){
+    balanceTotalAmount += withdrawTotalAmount
+    withdrawTotalAmount -= withdrawAmount
+    alert("You can't withdraw more")
+  }
+  else{
+    balanceTotalElement.innerText = balanceTotalAmount
+
+    withdrawTotalElement.innerText = withdrawTotalAmount
+  }
+
+  // clearing withdraw field
+  withdrawField.value =''
+})
